@@ -3,6 +3,10 @@
 @primary: #222;
 @blue: #84D9FB;
 @grey: #EBEEF1;
+@dark-blue: #0B1F51;
+
+@tablets: ~"(max-width: 1000px)";
+
 
 body {
     background: @grey;
@@ -25,6 +29,7 @@ button {
     font-weight: bold;
     font-family: 'Barlow', sans-serif;
     width: fit-content;
+    font-size: 18px;
 }
 
 .container {
@@ -58,6 +63,7 @@ header {
                 font-family: 'Barlow', sans-serif;
             }
         }
+
     }
 
     .banner {
@@ -66,7 +72,7 @@ header {
         background-size: cover;
         background-position: left;
         width: 100%;
-        height: 60vh;
+        height: 70vh;
 
         display: flex;
         flex-direction: column;
@@ -81,41 +87,82 @@ header {
         }
 
     }
-}
 
-.who-we-are {
-    background: white;
-    text-align: center;;
+    @media @tablets {
+        nav {
+            display: none;
+            padding: 0 20px;
 
-    .text {
-        width: 40%;
-        margin: auto auto 30px;
-    }
-
-    .seta { 
-        width: 50px;
-        height: 50px;
-    }
-
-    .container {
-        margin: auto;
-    }
-
-    .person {
-        display: flex;
-        align-items: center;
-        margin: 40px 0;
-        width: 70%;
-        text-align: left;
-
-        img {
-            border-radius: 50px 0;
-            height: 300px;
-            object-fit: cover;
+            ul {
+                flex-wrap: wrap;
+            }
         }
 
-        .description {
-            margin-left: 40px;
+        .banner {
+            height: 100vh;
+            
+            .container {
+                padding: 0 20px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.problems {
+    color: white;
+    width: 90%;
+    margin: -70px 0 80px 0;
+    display: flex;
+    
+    .container {
+        background: white;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Barlow', sans-serif;
+        padding: 50px;
+
+        p {
+            color: @primary;
+            padding: 0 20px;
+            max-width: 250px;
+
+            &+p {
+                border-left: 1px solid @grey;
+            }
+        }
+
+    }
+    
+    .last {
+        width: 200px;
+        background: @dark-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        svg {
+            animation: wave 3s ease-in-out infinite;
+        }
+    }
+
+    @media @tablets {
+        margin: -30px auto 80px;
+        width: 90%;
+
+        .container {
+            padding: 20px;
+            flex-wrap: wrap;
+
+            p {
+                padding: 20px 0;
+
+                &+p {
+                    border-left: 0px;
+                    border-top: 1px solid @grey;
+                }
+            }
         }
     }
 }
@@ -130,51 +177,123 @@ header {
         margin: auto;
     }
 
-    h2 {
-        text-align: center;
-        color: @primary;
+    .title {
+        margin: auto;
+        padding-bottom: 10px;
+        font-size: 32px;
+        width: fit-content;
+        border-bottom: 2px solid @blue;
+        margin-bottom: 20px;
     }
 
     .card {
         background: white;
-        border-radius: 8px;
         width: 250px;
         padding: 30px;
         text-align: left;
         color: #5B5B5B;
         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
 
-        .icon {
-            width: 30px;
-            height: 30px;
-            border-radius: 8px;
-            background: #E4476F;
-        }
-
         h2 {
             font-family: 'Barlow', sans-serif;
             color: @blue;
             text-align: left;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media @tablets {
+        .container {
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .card {
+            margin: 10px auto;
         }
     }
 }
 
-.problems {
-    color: white;
-    width: 70%;
-    margin: -70px auto 80px;
-    
-    .container {
-        background: white;
-        display: flex;
-        text-align: center;
-        font-family: 'Barlow', sans-serif;
-        padding: 40px;
-        margin: auto;
 
-        p {
-            margin: 0 20px;
-            color: @blue;
+.who-we-are {
+    background: white;
+    text-align: center;
+
+    .text {
+        width: 40%;
+        margin: 50px auto;
+    }
+
+    .title {
+        color: @dark-blue;
+        padding-bottom: 10px;
+        font-size: 32px;
+        width: fit-content;
+        border-bottom: 2px solid @dark-blue;
+        margin: 40px auto;
+    }
+
+    .seta { 
+        width: 50px;
+        height: 50px;
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    .content {
+        display: flex;
+
+    }
+
+    .person {
+        display: flex;
+        align-items: center;
+        margin: 40px 20px;
+        text-align: left;
+
+        img {
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .description {
+            padding: 0 20px;
+        }
+    }
+
+    @media @tablets {
+        padding: 20px 20px 0;
+
+        .text {
+            width: 90%;
+        }
+
+        .title {
+            margin: 20px auto;
+        }
+
+        .container {
+            padding: 0 20px;
+        }
+
+        .content {
+            flex-wrap: wrap;
+
+            .person {
+                flex-wrap: wrap;
+                margin: auto auto 40px;
+                text-align: center;
+
+                img {
+                    margin: auto;
+                }
+
+                .description {
+                    margin: auto;
+                }
+            }
         }
     }
 }
@@ -182,4 +301,41 @@ header {
 .clients {
     background: @primary;
     text-align: center;
+    
+    .container {
+        margin: auto;
+
+        .title {
+            color: white;
+            padding-bottom: 10px;
+            font-size: 32px;
+            width: fit-content;
+            border-bottom: 2px solid white;
+            margin: 40px auto;
+        }
+
+        .content {
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-around;
+
+            img {
+                height: 80px;
+                object-fit: contain;
+            }
+        }
+    }
 }
+
+@keyframes wave {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
