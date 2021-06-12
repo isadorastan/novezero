@@ -42,6 +42,11 @@ button {
 
 header { 
     background: white;
+
+    .logo-mobile {
+        display: none;
+    }
+
     nav {
         max-width: 1200px;
         margin: auto;
@@ -210,7 +215,7 @@ header {
 
     .card {
         background: white;
-        width: 250px;
+        width: 300px;
         padding: 30px;
         text-align: left;
         color: #5B5B5B;
@@ -232,6 +237,7 @@ header {
 
         .card {
             margin: 10px auto;
+            width: unset;
         }
     }
 }
@@ -240,6 +246,7 @@ header {
 .who-we-are {
     background: white;
     text-align: center;
+    padding-bottom: 50px;
 
     .text {
         width: 40%;
@@ -262,6 +269,7 @@ header {
 
     .container {
         margin: auto;
+        padding: 20px 0;
     }
 
     .content {
@@ -282,6 +290,10 @@ header {
 
         .description {
             padding: 0 20px;
+
+            h2 {
+                color: @dark-blue;
+            }
         }
     }
 
