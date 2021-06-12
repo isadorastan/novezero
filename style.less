@@ -7,6 +7,9 @@
 
 @tablets: ~"(max-width: 1000px)";
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background: @grey;
@@ -89,12 +92,31 @@ header {
     }
 
     @media @tablets {
+        .logo-mobile {
+            width: 200px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
         nav {
-            display: none;
+            padding: 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
             padding: 0 20px;
+            
+
+            img {
+                display: none;
+            }
 
             ul {
+                padding: 0;
                 flex-wrap: wrap;
+                font-size: 12px;
+                justify-content: space-between;
             }
         }
 
@@ -318,11 +340,18 @@ header {
             margin: 80px auto;
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
 
             img {
                 height: 80px;
                 object-fit: contain;
             }
+        }
+    }
+
+    @media @tablets {
+        img {
+            margin: 20px auto;
         }
     }
 }
