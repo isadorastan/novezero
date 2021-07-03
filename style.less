@@ -48,7 +48,7 @@ header {
     }
 
     nav {
-        max-width: 1200px;
+        // max-width: 1200px;
         margin: auto;
         height: 65px;
         background: white;
@@ -75,7 +75,7 @@ header {
 
     .banner {
         width: 100%;
-        background: url('./assets/header-bg2.png');
+        background: url('./assets/header-bg5.png');
         background-size: cover;
         background-position: left;
         width: 100%;
@@ -89,7 +89,7 @@ header {
             width: 50%;
 
             h2 {
-                font-size: 38px;
+                font-size: 48px;
             }
         }
     }
@@ -189,6 +189,91 @@ header {
     }
 }
 
+.pilares {
+    background: #031456;
+    padding: 100px 0;
+    position: relative;
+    margin: 150px auto;
+
+    .box {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &--itens {
+        position: absolute;
+        top: calc(50% - 220px);
+        left: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
+        -webkit-box-shadow: 10px 10px 19px 1px rgba(2, 16, 71, 0.63);
+        -moz-box-shadow: 10px 10px 19px 1px rgba(2, 16, 71, 0.63);
+        box-shadow: 10px 10px 19px 1px rgba(2, 16, 71, 0.63);
+
+        .item {
+            width: 220px;
+            height: 220px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            svg {
+                width: 80px;
+                height: 80px;
+                stroke: #4f97ca;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                color: #cccccc;
+                font-size: 12px;
+                margin: 0;
+            }
+
+            &:nth-child(1) {
+                background: #051763;
+            }
+
+            &:nth-child(2) {
+                background: #031456;
+            }
+
+            &:nth-child(3) {
+                background: #04124a;
+            }
+
+            &:nth-child(4) {
+                background: #030e3d;
+            }
+        }
+    }
+
+    .subtitle {
+        color: #fcad3f;
+        font-weight: bold;
+        margin: 0;
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 48px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        max-width: 70%;
+    }
+
+    p {
+        color: white;
+    }
+}
+
 .problems {
     color: white;
     width: 90%;
@@ -202,6 +287,10 @@ header {
         text-align: center;
         font-family: 'Barlow', sans-serif;
         padding: 50px;
+
+        -webkit-box-shadow: -9px 17px 16px -6px rgba(184, 184, 184, 1);
+        -moz-box-shadow: -9px 17px 16px -6px rgba(184, 184, 184, 1);
+        box-shadow: -9px 17px 16px -6px rgba(184, 184, 184, 1);
 
         p {
             color: @primary;
@@ -220,6 +309,10 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        -webkit-box-shadow: -9px 17px 16px -6px rgba(184, 184, 184, 1);
+        -moz-box-shadow: -9px 17px 16px -6px rgba(184, 184, 184, 1);
+        box-shadow: -9px 17px 16px -6px rgba(184, 184, 184, 1);
 
         svg {
             animation: wave 3s ease-in-out infinite;
@@ -295,7 +388,8 @@ header {
 }
 
 .who-we-are {
-    background: #f8f8f8;
+    // background: #f8f8f8;
+    margin: 100px auto;
 
     .container {
         display: flex;
@@ -308,34 +402,48 @@ header {
 
     img {
         min-width: 400px;
-        min-height: 400px;
+        min-height: 450px;
         max-width: 400px;
-        max-height: 400px;
+        max-height: 450px;
         object-fit: cover;
+    }
+
+    .subtitle {
+        color: #fcad3f;
+        font-weight: bold;
+        margin: 0;
+        font-size: 12px;
+        letter-spacing: 3px;
     }
 
     .text {
         padding: 30px;
         min-width: 400px;
-        min-height: 400px;
+        min-height: 450px;
         max-width: 400px;
-        max-height: 400px;
+        max-height: 450px;
+        margin-right: 15px;
+
+        -webkit-box-shadow: 10px 10px 21px 1px rgba(194, 194, 194, 0.57);
+            -moz-box-shadow: 10px 10px 21px 1px rgba(194, 194, 194, 0.57);
+            box-shadow: 10px 10px 21px 1px rgba(194, 194, 194, 0.57);
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        background: #1d45f2;
-        color: white;
+        justify-content: flex-start;
+        background: white;
+        color: black;
 
         h2 {
             font-size: 32px;
-            color: white;
+            color: black;
             margin: 0;
         }
 
         p {
             margin: 0;
             margin-top: 20px;
+            line-height: 1.45;
         }
     }
 
